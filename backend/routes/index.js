@@ -12,7 +12,7 @@ router.get("/", function (req, res, next) {
   res.render("index", { title: "Express" });
 });
 
-router.post("/SignUp", async (req, res) => {
+router.post("/signUp", async (req, res) => {
   console.log("Called");
 
   let { username, name, email, phone, password } = req.body;

@@ -19,15 +19,13 @@ function SignUp() {
   const [phone, setPhone] = useState("");
   const [pwd, setPwd] = useState("");
   const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const createUser = (e) => {
     e.preventDefault();
-    fetch(`${api_base_url}SignUp`, {
-      mode: "cors",
+    fetch(`${api_base_url}signUp`, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         username: username,
         name: name,
@@ -148,14 +146,17 @@ function SignUp() {
                       setPwd(e.target.value);
                     }}
                     value={pwd}
-                    type="password"
+                    type={showPassword ? "text" : "password"}
                     placeholder="Password"
                     id="Password"
                     name="Password"
                     required
                   />
-                  <i className="cursor-pointer !mr-3 !text-[25px]">
-                    <IoEyeSharp />
+                  <i
+                    className="cursor-pointer !mr-3 !text-[25px]"
+                    onClick={() => setShowPassword(!showPassword)}
+                  >
+                    {showPassword ? <IoEyeSharp /> : <IoEyeSharp />}
                   </i>
                 </div>
               </div>
