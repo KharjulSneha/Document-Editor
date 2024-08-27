@@ -18,6 +18,13 @@
 ![editor page](https://github.com/user-attachments/assets/4865018c-183f-4c3d-aea3-f371d38a4774)
 
 
+## Learnings:
+- API
+- Authentication and Authorization.
+- Mongodb database creation.
+- React states and callback functions.
+
+
 
 
 
