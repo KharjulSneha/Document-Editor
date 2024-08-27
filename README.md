@@ -1,4 +1,6 @@
 # Document Editor
+- frontend: Reactjs, tailwind css
+- backend : Nodejs, Mongodb, express
 
 ## Demo 
 
